@@ -102,7 +102,7 @@ AppAsset::register($this);
                                                     <span class="label label-sm label-icon label-info">
                                                         <i class="fa fa-bullhorn"></i>
                                                     </span>
-                                                    Application error.
+                                                    Lỗi ứng dụng.
                                                 </span>
                                             </a>
                                         </li>

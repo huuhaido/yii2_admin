@@ -449,20 +449,6 @@ AppAsset::register($this);
                                 </div>
                                 <!-- END SIDEBAR TOGGLER BUTTON -->
                             </li>
-                            <li class="sidebar-search-wrapper">
-                                <form class="sidebar-search " action="extra_search.html" method="POST">
-                                    <a href="javascript:;" class="remove">
-                                        <i class="icon-close"></i>
-                                    </a>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-btn">
-                                        <a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-                                    </span>
-                                    </div>
-                                </form>
-                                <!-- END RESPONSIVE QUICK SEARCH FORM -->
-                            </li>
                             <li class="heading">
                                 <h1 class="uppercase">Main menu</h1>
                             </li>
@@ -575,7 +561,7 @@ AppAsset::register($this);
             else if (currAction == 'orders')
                 activeMenu(2, 2);
         } else if (currController == 'adminmenu') {
-            if (currAction == 'index')
+            if (currAction == 'index' || currAction =='update'|| currAction =='create')
                 activeMenu(0, 1);
         }
         /**

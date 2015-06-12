@@ -19,7 +19,7 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body>
+    <body class="page-header-fixed page-quick-sidebar-over-content">
     <?php $this->beginBody() ?>
 
     <?php
@@ -437,10 +437,8 @@ AppAsset::register($this);
         </div>
         <!-- END HEADER -->
         <div class="clearfix"></div>
-        <!-- BEGIN CONTAINER -->
-        <div class="page-container">
-                <?php if(!empty($arrMenu)): $count = count($arrMenu); $li_id = 0;?>
-                <!-- BEGIN SIDEBAR (Menu trái) -->
+            <!-- BEGIN SIDEBAR (Menu trái) -->
+            <?php if(!empty($arrMenu)): $count = count($arrMenu); $li_id = 0;?>
                 <div class="page-sidebar-wrapper">
                     <div class="page-sidebar navbar-collapse collapse">
                         <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true"
@@ -515,18 +513,24 @@ AppAsset::register($this);
                         <!-- END SIDEBAR MENU -->
                     </div>
             </div>
-                <?php endif; ?>
+            <?php endif; ?>
             <!-- END SIDEBAR -->
             <!-- BEGIN CONTENT (Nội dung)-->
-            <div class="container" style="padding-top: 46px; padding-left: 132px; width: 84%;">
-                <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
-                <?= $content ?>
+            <div style="background-color: #fff;">
+                <!-- BEGIN CONTENT (Nội dung)-->
+                <div class="page-content-wrapper">
+                    <div class="page-content">
+                        <!-- BEGIN PAGE HEADER-->
+                        <?= Breadcrumbs::widget([
+                            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        ]) ?>
+                        <!-- END PAGE HEADER-->
+                        <?= $content ?>
+
+                    </div>
+                </div>
             </div>
             <!-- END CONTENT -->
-        </div>
-        <!-- END CONTAINER -->
     </div>
     <div class="page-footer">
         <div class="page-footer-inner">

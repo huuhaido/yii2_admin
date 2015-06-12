@@ -95,6 +95,7 @@ class Adminmenu extends ActiveRecord
         return $this->findAll([
             'status' => 1,
             'rank' => 2,
+            'left_right' => 0,
         ]);
     }
 
@@ -104,7 +105,8 @@ class Adminmenu extends ActiveRecord
     public function getAllMenuChildren(){
         return $this->findAll([
             'status'=>1,
-            'rank'=>3
+            'rank'=>3,
+            'left_right' => 0,
         ]);
     }
 

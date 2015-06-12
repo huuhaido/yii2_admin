@@ -1,3 +1,6 @@
+<?php
+    use yii\helpers\Url;
+?>
 <?php $this->title = 'Administrator'; ?>
 <!-- BEGIN CONTENT (Nội dung)-->
 <div class="page-content-wrapper">
@@ -216,7 +219,7 @@
                     </div>
                     <div class="portlet-body">
                         <div id="site_statistics_loading">
-                            <img src="../../assets/admin/layout/img/loading.gif" alt="loading"/>
+                            <img src="<?php echo Url::base();?>/images/loading.gif" alt="loading"/>
                         </div>
                         <div id="site_statistics_content" class="display-none">
                             <div id="site_statistics" class="chart"></div>
@@ -268,7 +271,7 @@
                     </div>
                     <div class="portlet-body">
                         <div id="site_activities_loading">
-                            <img src="../../assets/admin/layout/img/loading.gif" alt="loading"/>
+                            <img src="<?php echo Url::base();?>/images/loading.gif" alt="loading"/>
                         </div>
                         <div id="site_activities_content" class="display-none">
                             <div id="site_activities" style="height: 228px;">
@@ -1111,7 +1114,7 @@
                     </div>
                     <div class="portlet-body">
                         <div id="region_statistics_loading">
-                            <img src="../../assets/admin/layout/img/loading.gif" alt="loading"/>
+                            <img src="<?php echo Url::base();?>/images/loading.gif" alt="loading"/>
                         </div>
                         <div id="region_statistics_content" class="display-none">
                             <div class="btn-toolbar margin-bottom-10">
@@ -1736,7 +1739,7 @@
                                      data-rail-visible1="1">
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1749,7 +1752,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1763,7 +1766,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1775,7 +1778,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1789,7 +1792,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1801,7 +1804,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1815,7 +1818,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1827,7 +1830,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1841,7 +1844,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1853,7 +1856,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1867,7 +1870,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1879,7 +1882,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 user-info">
-                                            <img alt="" src="../../assets/admin/layout/img/avatar.png"
+                                            <img alt="" src="<?php echo Url::base();?>/images/avatar.png"
                                                  class="img-responsive"/>
 
                                             <div class="details">
@@ -1938,7 +1941,7 @@
                         <div class="scroller" style="height: 341px;" data-always-visible="1" data-rail-visible1="1">
                             <ul class="chats">
                                 <li class="in">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar1.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar1.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>
@@ -1948,7 +1951,7 @@
                                     </div>
                                 </li>
                                 <li class="out">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar2.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar2.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>
@@ -1958,7 +1961,7 @@
                                     </div>
                                 </li>
                                 <li class="in">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar1.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar1.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"> </span>
@@ -1968,7 +1971,7 @@
                                     </div>
                                 </li>
                                 <li class="out">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar3.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar3.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"> </span>
@@ -1978,7 +1981,7 @@
                                     </div>
                                 </li>
                                 <li class="in">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar3.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar3.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>
@@ -1988,7 +1991,7 @@
                                     </div>
                                 </li>
                                 <li class="out">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar1.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar1.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>
@@ -1998,7 +2001,7 @@
                                     </div>
                                 </li>
                                 <li class="in">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar3.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar3.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>
@@ -2008,7 +2011,7 @@
                                     </div>
                                 </li>
                                 <li class="out">
-                                    <img class="avatar" alt="" src="../../assets/admin/layout/img/avatar1.jpg"/>
+                                    <img class="avatar" alt="" src="<?php echo Url::base();?>/images/avatar1.jpg"/>
 
                                     <div class="message">
                                         <span class="arrow"></span>

@@ -1,51 +1,374 @@
 <?php
-/* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+    use yii\helpers\Url;
+    /* @var $this yii\web\View */
+    $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+<div class="title-wrapper">
+    <div class="container"><div class="container-inner">
+            <h1><span>MEN</span> CATEGORY</h1>
+            <em>Over 4000 Items are available here</em>
+        </div></div>
+</div>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+<div class="main">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Store</a></li>
+            <li class="active">Men category</li>
+        </ul>
+        <!-- BEGIN SIDEBAR & CONTENT -->
+        <div class="row margin-bottom-40">
+            <!-- BEGIN SIDEBAR -->
+            <div class="sidebar col-md-3 col-sm-5">
+                <ul class="list-group margin-bottom-25 sidebar-menu">
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Ladies</a></li>
+                    <li class="list-group-item clearfix dropdown active">
+                        <a href="javascript:void(0);" class="collapsed">
+                            <i class="fa fa-angle-right"></i>
+                            Mens
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+                        </a>
+                        <ul class="dropdown-menu" style="display:block;">
+                            <li class="list-group-item dropdown clearfix active">
+                                <a href="javascript:void(0);" class="collapsed"><i class="fa fa-angle-right"></i> Shoes </a>
+                                <ul class="dropdown-menu" style="display:block;">
+                                    <li class="list-group-item dropdown clearfix">
+                                        <a href="javascript:void(0);"><i class="fa fa-angle-right"></i> Classic </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 1</a></li>
+                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-group-item dropdown clearfix active">
+                                        <a href="javascript:void(0);" class="collapsed"><i class="fa fa-angle-right"></i> Sport  </a>
+                                        <ul class="dropdown-menu" style="display:block;">
+                                            <li class="active"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 1</a></li>
+                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Trainers</a></li>
+                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Jeans</a></li>
+                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Chinos</a></li>
+                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> T-Shirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Kids</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Accessories</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sports</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Brands</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Electronics</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Home & Garden</a></li>
+                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Custom Link</a></li>
+                </ul>
 
-    <div class="body-content">
+                <div class="sidebar-filter margin-bottom-25">
+                    <h2>Filter</h2>
+                    <h3>Availability</h3>
+                    <div class="checkbox-list">
+                        <label><input type="checkbox"> Not Available (3)</label>
+                        <label><input type="checkbox"> In Stock (26)</label>
+                    </div>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+                    <h3>Price</h3>
+                    <p>
+                        <label for="amount">Range:</label>
+                        <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                    <div id="slider-range"></div>
+                </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <div class="sidebar-products clearfix">
+                    <h2>Bestsellers</h2>
+                    <div class="item">
+                        <a href="shop-item.html"><img src="<?php echo Url::base();?>/images/products/k1.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
+                        <div class="price">$31.00</div>
+                    </div>
+                    <div class="item">
+                        <a href="shop-item.html"><img src="<?php echo Url::base();?>/images/products/k4.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
+                        <div class="price">$23.00</div>
+                    </div>
+                    <div class="item">
+                        <a href="shop-item.html"><img src="<?php echo Url::base();?>/images/products/k3.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
+                        <div class="price">$86.00</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="col-md-9 col-sm-7">
+                <div class="row list-view-sorting clearfix">
+                    <div class="col-md-2 col-sm-2 list-view">
+                        <a href="javascript:;"><i class="fa fa-th-large"></i></a>
+                        <a href="javascript:;"><i class="fa fa-th-list"></i></a>
+                    </div>
+                    <div class="col-md-10 col-sm-10">
+                        <div class="pull-right">
+                            <label class="control-label">Show:</label>
+                            <select class="form-control input-sm">
+                                <option value="#?limit=24" selected="selected">24</option>
+                                <option value="#?limit=25">25</option>
+                                <option value="#?limit=50">50</option>
+                                <option value="#?limit=75">75</option>
+                                <option value="#?limit=100">100</option>
+                            </select>
+                        </div>
+                        <div class="pull-right">
+                            <label class="control-label">Sort&nbsp;By:</label>
+                            <select class="form-control input-sm">
+                                <option value="#?sort=p.sort_order&amp;order=ASC" selected="selected">Default</option>
+                                <option value="#?sort=pd.name&amp;order=ASC">Name (A - Z)</option>
+                                <option value="#?sort=pd.name&amp;order=DESC">Name (Z - A)</option>
+                                <option value="#?sort=p.price&amp;order=ASC">Price (Low &gt; High)</option>
+                                <option value="#?sort=p.price&amp;order=DESC">Price (High &gt; Low)</option>
+                                <option value="#?sort=rating&amp;order=DESC">Rating (Highest)</option>
+                                <option value="#?sort=rating&amp;order=ASC">Rating (Lowest)</option>
+                                <option value="#?sort=p.model&amp;order=ASC">Model (A - Z)</option>
+                                <option value="#?sort=p.model&amp;order=DESC">Model (Z - A)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- BEGIN PRODUCT LIST -->
+                <div class="row product-list">
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model6.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model6.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress 2</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                </div>
+                <div class="row product-list">
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model4.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model4.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model5.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model5.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                            <div class="sticker sticker-new"></div>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model3.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model3.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                </div>
+                <div class="row product-list">
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model7.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model7.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                    <!-- PRODUCT ITEM START -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="product-item">
+                            <div class="pi-img-wrapper">
+                                <img src="<?php echo Url::base();?>/images/products/model2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                                <div>
+                                    <a href="<?php echo Url::base();?>/images/products/model2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                </div>
+                            </div>
+                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
+                            <div class="pi-price">$29.00</div>
+                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                            <div class="sticker sticker-sale"></div>
+                        </div>
+                    </div>
+                    <!-- PRODUCT ITEM END -->
+                </div>
+                <!-- END PRODUCT LIST -->
+                <!-- BEGIN PAGINATOR -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 items-info">Items 1 to 9 of 10 total</div>
+                    <div class="col-md-8 col-sm-8">
+                        <ul class="pagination pull-right">
+                            <li><a href="javascript:;">&laquo;</a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><span>2</span></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li><a href="javascript:;">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END PAGINATOR -->
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+            <!-- END CONTENT -->
         </div>
-
+        <!-- END SIDEBAR & CONTENT -->
     </div>
 </div>
+<!-- BEGIN fast view of a product -->
+<div id="product-pop-up" style="display: none; width: 700px;">
+    <div class="product-page product-pop-up">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-3">
+                <div class="product-main-image">
+                    <img src="<?php echo Url::base();?>/images/products/model7.jpg" alt="Cool green dress with red bell" class="img-responsive">
+                </div>
+                <div class="product-other-images">
+                    <a href="javascript:;" class="active"><img alt="Berry Lace Dress" src="<?php echo Url::base();?>/images/products/model3.jpg"></a>
+                    <a href="javascript:;"><img alt="Berry Lace Dress" src="<?php echo Url::base();?>/images/products/model4.jpg"></a>
+                    <a href="javascript:;"><img alt="Berry Lace Dress" src="<?php echo Url::base();?>/images/products/model5.jpg"></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-9">
+                <h1>Cool green dress with red bell</h1>
+                <div class="price-availability-block clearfix">
+                    <div class="price">
+                        <strong><span>$</span>47.00</strong>
+                        <em>$<span>62.00</span></em>
+                    </div>
+                    <div class="availability">
+                        Availability: <strong>In Stock</strong>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed nonumy nibh sed euismod laoreet dolore magna aliquarm erat volutpat
+                        Nostrud duis molestie at dolore.</p>
+                </div>
+                <div class="product-page-options">
+                    <div class="pull-left">
+                        <label class="control-label">Size:</label>
+                        <select class="form-control input-sm">
+                            <option>L</option>
+                            <option>M</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
+                    <div class="pull-left">
+                        <label class="control-label">Color:</label>
+                        <select class="form-control input-sm">
+                            <option>Red</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-page-cart">
+                    <div class="product-quantity">
+                        <input id="product-quantity" type="text" value="1" readonly name="product-quantity" class="form-control input-sm">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Add to cart</button>
+                    <a href="shop-item.html" class="btn btn-default">More details</a>
+                </div>
+            </div>
+
+            <div class="sticker sticker-sale"></div>
+        </div>
+    </div>
+</div>
+<!-- END fast view of a product -->
